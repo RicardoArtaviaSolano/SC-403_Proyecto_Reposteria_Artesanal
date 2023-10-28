@@ -1,4 +1,4 @@
-package com.reposteria_v1;
+package com.reposteria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
