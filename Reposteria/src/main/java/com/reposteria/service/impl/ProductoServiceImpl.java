@@ -1,4 +1,3 @@
-
 package com.reposteria.service.impl;
 
 import com.reposteria.dao.ProductoDao;
@@ -11,13 +10,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductoServiceImpl implements ProductoService{
     
-    
     //La anotacion autowired crea un unico objeto mientras se ejecuta la aplicacion
     @Autowired
     private ProductoDao productoDao;
     
     @Override
     public List<Producto> getProductos(boolean activos){
+
     
         var lista=productoDao.findAll();//encontrar todos los datos de la lista
         

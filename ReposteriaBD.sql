@@ -23,6 +23,7 @@ CREATE TABLE ReposteriaDB.Ventas (
     Fecha DATE NOT NULL,
     Cliente VARCHAR(100),
     Total DECIMAL(10, 2) NOT NULL,
+
     activo bool
 );
 
@@ -32,6 +33,7 @@ CREATE TABLE ReposteriaDB.DetalleVentas (
     Cantidad INT NOT NULL,
     FOREIGN KEY (VentaID) REFERENCES Ventas(VentaID),
     FOREIGN KEY (ProductoID) REFERENCES Productos(ProductoID),
+
     activo bool
 );
 

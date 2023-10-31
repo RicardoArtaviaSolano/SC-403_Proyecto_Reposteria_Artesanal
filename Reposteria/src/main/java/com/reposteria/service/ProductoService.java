@@ -1,4 +1,3 @@
-
 package com.reposteria.service;
 
 import com.reposteria.domain.Producto;
@@ -12,4 +11,5 @@ public interface ProductoService {
     
     public List<Producto> getProductos(boolean activos);
     //Abajo se colocara los metodos para realizar el CRUD de productos
+
 }

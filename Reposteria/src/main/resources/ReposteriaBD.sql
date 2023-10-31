@@ -1,3 +1,4 @@
+
 drop schema if exists ReposteriaDB;
 drop user if exists administrador;
 
@@ -32,6 +33,7 @@ CREATE TABLE ReposteriaDB.DetalleVentas (
     Cantidad INT NOT NULL,
     FOREIGN KEY (VentaID) REFERENCES Ventas(VentaID),
     FOREIGN KEY (ProductoID) REFERENCES Productos(ProductoID),
+
     activo bool
 );
 

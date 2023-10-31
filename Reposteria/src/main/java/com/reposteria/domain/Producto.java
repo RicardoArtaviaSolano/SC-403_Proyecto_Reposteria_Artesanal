@@ -1,3 +1,4 @@
+
 package com.reposteria.domain;
 
 import jakarta.persistence.Column;
@@ -11,6 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
+
 @Table(name="producto")
 //Serializacion va almacenar datos de la bd
 public class Producto implements Serializable{
@@ -30,6 +32,7 @@ public class Producto implements Serializable{
 
     public Producto() {
     }
+
 
     public Producto(String Descripcion, boolean activo) {
         this.Descripcion = Descripcion;
