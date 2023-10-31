@@ -1,42 +1,42 @@
 
 package com.reposteria.domain;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Productos")
+
+@Table(name="producto")
+//Serializacion va almacenar datos de la bd
 public class Producto implements Serializable{
     
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L; //Para poder hacer el cilo de la sumatoria de la categorio (AUTO_INCREMENT)
     
-    @Id
+    @Id //Id es la llave de la tabla producto
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="ProductoID")
+    @Column(name = "ProductoID")
     private long ProductoID;
     private String Nombre;
     private String Descripcion;
     private int Precio;
     private int Stock;
-    private String Categoria;
     private String Imagen;
     private boolean activo;
 
     public Producto() {
     }
 
-    public Producto(long ProductoID, String Nombre, String Descripcion, int Precio, int Stock, String Categoria, String Imagen, boolean activo) {
-        this.ProductoID = ProductoID;
-        this.Nombre = Nombre;
+
+    public Producto(String Descripcion, boolean activo) {
         this.Descripcion = Descripcion;
-        this.Precio = Precio;
-        this.Stock = Stock;
-        this.Categoria = Categoria;
-        this.Imagen = Imagen;
         this.activo = activo;
     }
-
-
+    
 }

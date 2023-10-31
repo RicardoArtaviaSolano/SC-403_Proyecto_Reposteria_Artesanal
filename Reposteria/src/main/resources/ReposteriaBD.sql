@@ -1,7 +1,11 @@
+
+drop schema if exists ReposteriaDB;
+drop user if exists administrador;
+
 CREATE SCHEMA ReposteriaDB;
 USE ReposteriaDB;
 create user 'administrador'@'%' identified by '123-admin';
-grant all privileges on techshop.* to 'usuario_prueba'@'%';
+grant all privileges on ReposteriaDB.* to 'administrador'@'%';
 flush privileges;
 
 CREATE TABLE ReposteriaDB.Productos (
@@ -20,7 +24,7 @@ CREATE TABLE ReposteriaDB.Ventas (
     Fecha DATE NOT NULL,
     Cliente VARCHAR(100),
     Total DECIMAL(10, 2) NOT NULL,
-	activo bool
+    activo bool
 );
 
 CREATE TABLE ReposteriaDB.DetalleVentas (
@@ -29,7 +33,8 @@ CREATE TABLE ReposteriaDB.DetalleVentas (
     Cantidad INT NOT NULL,
     FOREIGN KEY (VentaID) REFERENCES Ventas(VentaID),
     FOREIGN KEY (ProductoID) REFERENCES Productos(ProductoID),
-	activo bool
+
+    activo bool
 );
 
 CREATE TABLE ReposteriaDB.usuario (

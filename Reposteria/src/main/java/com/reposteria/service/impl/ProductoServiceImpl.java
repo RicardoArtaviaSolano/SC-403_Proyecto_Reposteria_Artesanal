@@ -11,18 +11,19 @@ import org.springframework.stereotype.Service;
 public class ProductoServiceImpl implements ProductoService{
     
     //La anotacion autowired crea un unico objeto mientras se ejecuta la aplicacion
-    
     @Autowired
     private ProductoDao productoDao;
     
     @Override
     public List<Producto> getProductos(boolean activos){
+
+    
+        var lista=productoDao.findAll();//encontrar todos los datos de la lista
         
-        var lista=productoDao.findAll();
-        
-        if(activos){
-            lista.removeIf(e-> !e.isActivos());
+        if (activos){
+            lista.removeIf(e-> !e.isActivo());
         }
+        
         return lista;
     }
 }
