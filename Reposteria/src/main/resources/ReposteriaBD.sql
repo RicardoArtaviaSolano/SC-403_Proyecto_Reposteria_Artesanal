@@ -1,4 +1,3 @@
-
 drop schema if exists ReposteriaDB;
 drop user if exists administrador;
 
@@ -7,6 +6,15 @@ USE ReposteriaDB;
 create user 'administrador'@'%' identified by '123-admin';
 grant all privileges on ReposteriaDB.* to 'administrador'@'%';
 flush privileges;
+
+CREATE TABLE ReposteriaDB.categoria (
+  CategoriaID INT NOT NULL AUTO_INCREMENT,
+  descripcion VARCHAR(30) NOT NULL,
+  ruta_imagen varchar(1024),
+  activo bool,
+  PRIMARY KEY (id_categoria))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
 
 CREATE TABLE ReposteriaDB.Productos (
     ProductoID INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,6 +32,7 @@ CREATE TABLE ReposteriaDB.Ventas (
     Fecha DATE NOT NULL,
     Cliente VARCHAR(100),
     Total DECIMAL(10, 2) NOT NULL,
+
     activo bool
 );
 
