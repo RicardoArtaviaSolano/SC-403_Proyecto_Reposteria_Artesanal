@@ -5,11 +5,10 @@ import com.reposteria.domain.Categoria;
 import java.util.List;
 
 public interface CategoriaService {
-    
-    // Se obtiene un listado de categorias en un List
-    public List<Categoria> getCategorias(boolean activos);
-    
-   // Se obtiene un Categoria, a partir del id de un categoria
+
+    public List<Categoria> getCategorias(boolean activo);
+
+    // Se obtiene un Categoria, a partir del id de un categoria
     public Categoria getCategoria(Categoria categoria);
     
     // Se inserta un nuevo categoria si el id del categoria esta vacío

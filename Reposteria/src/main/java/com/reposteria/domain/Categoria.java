@@ -4,36 +4,36 @@
  */
 package com.reposteria.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name="categoria")
-//Serializacion va almacenar datos de la bd
-public class Categoria implements Serializable{
-    
-    private static final long serialVersionUID = 1L; //Para poder hacer el cilo de la sumatoria de la categorio (AUTO_INCREMENT)
-    
-    @Id //Id es la llave de la tabla categoria
+@Table(name = "categoria")
+public class Categoria implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
-    private long idCategoria;
+    private Long idCategoria;
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
 
+    @OneToMany
+    @JoinColumn(name = "id_categoria", updatable = false)
+    List<Producto> productos;
+
     public Categoria() {
     }
 
-    public Categoria(String descripcion) {
+    public Categoria(String descripcion, boolean activo) {
         this.descripcion = descripcion;
+        this.activo = activo;
     }
-    
+
 }
