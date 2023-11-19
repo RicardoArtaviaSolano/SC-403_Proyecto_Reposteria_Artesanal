@@ -85,30 +85,14 @@ DEFAULT CHARACTER SET = utf8mb4;
 /*Se insertan 3 categorias de productos como ejemplo */
 INSERT INTO ReposteriaDB.categoria (id_categoria, descripcion, ruta_imagen, activo)
 VALUES
-  (1, 'Pasteles', 'categoria_pasteles.jpg', 1),
-  (2, 'Galletas', 'categoria_galletas.jpg', 1),
-  (3, 'Bollería', 'categoria_bolleria.jpg', 1),
-  (4, 'Cupcakes', 'categoria_cupcakes.jpg', 1),
-  (5, 'Tartas', 'categoria_tartas.jpg', 1),
-  (6, 'Brownies', 'categoria_brownies.jpg', 1),
-  (7, 'Magdalenas', 'categoria_magdalenas.jpg', 1),
-  (8, 'Panadería', 'categoria_panaderia.jpg', 1),
-  (9, 'Postres Especiales', 'categoria_postres_especiales.jpg', 1),
-  (10, 'Sin Gluten', 'categoria_sin_gluten.jpg', 1);
+  (1, 'Pasteles', 'categoria_pasteles.jpg', 1);
+
 
 /*Se insertan 4 productos por categoria */
 INSERT INTO ReposteriaDB.producto (id_producto, id_categoria, descripcion, detalle, precio, existencias, ruta_imagen, activo)
 VALUES
-  (1, 1, 'Pastel de Chocolate', 'Delicioso pastel de chocolate con relleno de crema.', 20.99, 50, 'pastel_chocolate.jpg', 1),
-  (2, 1, 'Tarta de Fresa', 'Tarta fresca de fresa con cobertura de crema batida.', 18.99, 40, 'tarta_fresa.jpg', 1),
-  (3, 2, 'Galletas de Mantequilla', 'Galletas caseras de mantequilla perfectas para el té.', 8.99, 100, 'galletas_mantequilla.jpg', 1),
-  (4, 2, 'Cupcakes de Vainilla', 'Cupcakes de vainilla con decoraciones coloridas.', 12.99, 60, 'cupcakes_vainilla.jpg', 1),
-  (5, 3, 'Croissants de Chocolate', 'Deliciosos croissants rellenos de chocolate.', 6.99, 80, 'croissants_chocolate.jpg', 1),
-  (6, 3, 'Éclair de Café', 'Éclair relleno de crema de café y cubierto de chocolate.', 9.99, 30, 'eclair_cafe.jpg', 1),
-  (7, 1, 'Tarta de Limón', 'Tarta refrescante de limón con merengue.', 17.99, 35, 'tarta_limon.jpg', 1),
-  (8, 2, 'Magdalenas de Arándanos', 'Magdalenas esponjosas con arándanos frescos.', 7.99, 70, 'magdalenas_arandanos.jpg', 1),
-  (9, 3, 'Brownies de Nuez', 'Brownies de chocolate con nueces crujientes.', 11.99, 45, 'brownies_nuez.jpg', 1),
-  (10, 1, 'Tarta de Manzana', 'Tarta de manzana con canela y crujiente de almendras.', 19.99, 25, 'tarta_manzana.jpg', 1);
+  (1, 1, 'Pastel de Chocolate', 'Delicioso pastel de chocolate con relleno de crema.', 20.99, 50, 'https://images.app.goo.gl/7UgSP6NPYcPCvPmc7', 1);
+
 
 /*Se crean 6 facturas */   /*'Activa','Pagada','Anulada')*/
 /*INSERT INTO ReposteriaDB.factura (id_factura,id_usuario,fecha,total,estado) VALUES
