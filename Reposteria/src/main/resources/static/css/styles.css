@@ -1,0 +1,13 @@
+body {
+    background: url('/videos/fondo.mp4') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden; /* Para que el video no se muestre fuera del área de la página */
+    color: #ffffff; /* Color del texto sobre el video */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para que el texto sea legible */
+}
