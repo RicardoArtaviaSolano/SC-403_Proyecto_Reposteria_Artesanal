@@ -77,10 +77,10 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
 /*Se insertan 3 registros en la tabla cliente como ejemplo */
-/*INSERT INTO ReposteriaDB.usuario (id_usuario, username,password,nombre, apellidos, correo, telefono,ruta_imagen,activo) VALUES 
-(1,'juan','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.','Juan', 'Castro Mora',    'jcastro@gmail.com',    '4556-8978', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Juan_Diego_Madrigal.jpg/250px-Juan_Diego_Madrigal.jpg',true),
-(2,'rebeca','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi','Rebeca',  'Contreras Mora', 'acontreras@gmail.com', '5456-8789','https://upload.wikimedia.org/wikipedia/commons/0/06/Photo_of_Rebeca_Arthur.jpg',true),
-(3,'pedro','$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO','Pedro', 'Mena Loria',     'lmena@gmail.com',      '7898-8936','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Eduardo_de_Pedro_2019.jpg/480px-Eduardo_de_Pedro_2019.jpg?20200109230854',true);*/
+INSERT INTO ReposteriaDB.usuario (id_usuario, username,password,nombre, apellidos, correo, telefono,ruta_imagen,activo) VALUES 
+(1,'administrador','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.','Juan', 'Castro Mora',    'jcastro@gmail.com',    '4556-8978', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Juan_Diego_Madrigal.jpg/250px-Juan_Diego_Madrigal.jpg',true),
+(2,'cocinero','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi','Rebeca',  'Contreras Mora', 'acontreras@gmail.com', '5456-8789','https://upload.wikimedia.org/wikipedia/commons/0/06/Photo_of_Rebeca_Arthur.jpg',true),
+(3,'repartidor','$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO','Pedro', 'Mena Loria',     'lmena@gmail.com',      '7898-8936','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Eduardo_de_Pedro_2019.jpg/480px-Eduardo_de_Pedro_2019.jpg?20200109230854',true);
 
 /*Se insertan 3 categorias de productos como ejemplo */
 INSERT INTO ReposteriaDB.categoria (id_categoria, descripcion, ruta_imagen, activo)
@@ -123,7 +123,7 @@ VALUES
 (17,3,12,45000,1),
 (18,3,10,15000,3);*/
 
-/*create table ReposteriaDB.rol (
+create table ReposteriaDB.rol (
   id_rol INT NOT NULL AUTO_INCREMENT,
   nombre varchar(20),
   id_usuario int,
@@ -131,9 +131,9 @@ VALUES
   foreign key fk_rol_usuario (id_usuario) references usuario(id_usuario)
 )
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;*/
+DEFAULT CHARACTER SET = utf8mb4;
 
-/*insert into ReposteriaDB.rol (id_rol, nombre, id_usuario) values
+insert into ReposteriaDB.rol (id_rol, nombre, id_usuario) values
  (1,'ROLE_ADMIN',1), (2,'ROLE_VENDEDOR',1), (3,'ROLE_USER',1),
  (4,'ROLE_VENDEDOR',2), (5,'ROLE_USER',2),
- (6,'ROLE_USER',3);*/
+ (6,'ROLE_USER',3);
