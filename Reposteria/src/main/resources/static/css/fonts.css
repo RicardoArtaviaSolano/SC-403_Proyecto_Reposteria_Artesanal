@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'NuevaFuente';
+    src: url('/fonts/NuevaFuente.woff2') format('woff2'); /* Cambia 'NuevaFuente' por el nombre real de tu fuente y ajusta la ruta según tu estructura de carpetas */
+    font-weight: normal;
+    font-style: normal;
+}
